@@ -6,7 +6,7 @@
 module.exports = {
   data: function() {
     return {
-      pot: "Medium Pot"
+      pot: "Medium  Pot"
     };
   }
 };

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
+    <p>{{pot}}</p>
     <BigPot />
-    <MediumPot />
-    <MediumPot />
+    <MediumPot v-for="type in imageType" :imageType="type" :key="type" />
   </div>
 </template>
 
@@ -15,12 +15,18 @@ export default {
   components: {
     BigPot,
     MediumPot
+  },
+  data() {
+    return {
+      imageType: ["hourly_drop", "super_drop"]
+    };
   }
 };
 </script>
 
 <style>
 #app {
+  background-image: url("./assets/bg.png");
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
